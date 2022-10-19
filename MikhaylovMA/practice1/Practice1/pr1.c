@@ -9,7 +9,7 @@ int main()
 
 	// Getting data
 	printf("Insert h (180-220 cm), w (80-120 cm), d (50-90 cm) \n");
-	scanf("%f %f %f", &h, &w, &d);
+	scanf("%f%f%f", &h, &w, &d);
 	if (h > 220 || h < 180 || w > 120 || w < 80 || d > 90 || d < 50)
 	{
 		printf("Invalid metrics");
@@ -17,7 +17,7 @@ int main()
 	}
 
 	// Finding number of shelves
-	shelves_count = h / (40 + 1.5f);
+	shelves_count = (short) (h / (40 + 1.5f));
 
 	// Finding sizes
 	size_backwall = h * w * 0.5f;
