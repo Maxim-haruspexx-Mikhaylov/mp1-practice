@@ -32,11 +32,6 @@ int main() {
 		} while (check != '0');
 	}
 
-	for (short i = 0; i < length; i++) {
-		printf("%hd", nums[i]);
-	}
-	printf("\n");
-
 	printf("I chose the number. Try to guess it! (type '-1' for answer)\n");
 	while (1) {
 		check2 = '0';
@@ -47,7 +42,7 @@ int main() {
 		do {
 			printf("What's your guess? \n");
 			scanf("%d", &guess);
-		} while (!((guess >= pow(10, length - 1) && guess <= pow(10, length) - 1) || guess == -1));
+		} while (!((guess >= pow(10, (double)length - 1) && guess <= pow(10, length) - 1) || guess == -1));
 
 		if (guess == -1) {
 			for (short i = 0; i < length; i++) {
