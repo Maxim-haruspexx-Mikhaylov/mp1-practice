@@ -69,9 +69,9 @@ void get_menu_from_file() {
 	fclose(data_file);*/
 }
 
-void menu_init() {
-	char str[LEN];
-	struct item items[ITEMS_NUM] = { "1111", "Baton", 40, 10,
+void menu_init(struct item items[ITEMS_NUM]) {
+	 char str[LEN];
+	 struct item items[ITEMS_NUM] = {"1111", "Baton", 40, 10,
 									 "1112", "Rye bread", 23, 10,
 									 "1113", "Borodinskiy bread", 50, 15,
 									 "1114", "Curd", 33, 20,
@@ -81,12 +81,13 @@ void menu_init() {
 									 "1118", "Crumbs", 12, 5,
 									 "1119", "Bread in dough", 450, 50,
 									 "1121", "Baguette", 90, 35};
-
 }
 
 
 int main() {
-	menu_init();
+	struct item menu[ITEMS_NUM];
+	menu_init(menu);
+	printf("%s", menu[1].name);
 	return 0;
 
 }
