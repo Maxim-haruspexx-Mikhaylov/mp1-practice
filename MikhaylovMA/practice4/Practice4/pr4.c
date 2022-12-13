@@ -64,7 +64,7 @@ int get_receipt(struct receipt_item receipt[ITEMS_NUM]) {
 }
 
 int main() {
-	char code[5];
+	char code[LEN];
 	struct receipt_item receipt[ITEMS_NUM];
 	struct item menu[ITEMS_NUM] = { "1111", "Baton", 40, 10,
 									"1112", "Rye bread", 23, 10,
